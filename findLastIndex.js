@@ -16,11 +16,11 @@ _.findLastIndex(users, {
 // Your code here!
 const findLastIndex = (objectList, check) => {
   lastIndex = null
-  objectList.forEach((object, index) => {
-    if (check(object)) {
-      lastIndex = index
+  for (let i = objectList.length; i--;)
+    if (check(objectList[i])) {
+      lastIndex = i;
+      break;
     }
-  })
   return lastIndex
 }
 
